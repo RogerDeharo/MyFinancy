@@ -1,5 +1,6 @@
 import 'package:finnancy_app/common/constants/app_colors.dart';
 import 'package:finnancy_app/common/constants/app_text_styles.dart';
+import 'package:finnancy_app/common/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -20,7 +21,10 @@ class OnboardingPage extends StatelessWidget {
             'Send More',
             textAlign: TextAlign.center,
             style: AppTextStyles.mediumText.copyWith(color: AppColors.white),),
-          ElevatedButton(onPressed: () {}, child: const Text('Get Started')),
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: PrimaryButton(text: 'Get Started', onPressed: () {},),
+          ),
           Text('Already have account? log in', style: AppTextStyles.smallText.copyWith(color: AppColors.grey)),
           const SizedBox(height: 35.0,)
       ]),
